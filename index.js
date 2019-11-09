@@ -1,13 +1,13 @@
-const client = new Client({
-    disableEveryone:true
-  });
+
   const { Client, RichEmbed } = require("discord.js");
   const { config } = require("dotenv");
   const { Collection } = require("discord.js")
   const fs = require("fs");
   const prefix = "a!"
   
-
+  const client = new Client({
+    disableEveryone:true
+  });
 
 client.on('ready', () => {
     console.log(`${client.user.username} is online!`)
