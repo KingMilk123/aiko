@@ -1,17 +1,18 @@
 const Discord = require('discord.js')
-const bot = new Discord.Client()
+const client = new Client({
+    disableEveryone:true
+  });
 const prefix = 'a!'
 const fs = require("fs")
 const ms = require("ms")
 let warns = JSON.parse(fs.readFileSync("./warnings.json", "utf8"))
 
-const token = 'NjQyNDc2MTI5MjczMzgwOTE1.Xcbszw.i-C31i7UMn0esvFM5eZWUP_Hvmc'
 
 
 
-bot.on('ready', () => {
-    console.log(`${bot.user.username} is online!`)
-    bot.user.setPresence({
+client.on('ready', () => {
+    console.log(`${client.user.username} is online!`)
+    client.user.setPresence({
         status: "online",
         game: {
             name: "Daniel's server",
@@ -20,7 +21,7 @@ bot.on('ready', () => {
     }); 
 })
 
-bot.on('message', message=>{
+client.on('message', message=>{
     const args = message.content.substring(prefix.length).split(" ");
 
     switch(args[0]){
@@ -134,4 +135,4 @@ bot.on('message', message=>{
     }
 })
 
-bot.login(token);
+client.login(process.env.TOKEN);
