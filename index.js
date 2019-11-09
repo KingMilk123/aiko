@@ -132,4 +132,4 @@ bot.on('message', message=>{
     }
 })
 
-bot.login("NjQyNDc2MTI5MjczMzgwOTE1.XcYlxw.achWFCpH0zgmQiHfmIApm2AMFZE");
+bot.login("NjQyNDc2MTI5MjczMzgwOTE1.XcYmSw.JsfmLFknumAJMt0TqNygjiUEJsQ");
