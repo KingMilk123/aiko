@@ -1,13 +1,12 @@
-const Discord = require('discord.js')
 const client = new Client({
     disableEveryone:true
   });
-const prefix = 'a!'
-const fs = require("fs")
-const ms = require("ms")
-let warns = JSON.parse(fs.readFileSync("./warnings.json", "utf8"))
-
-
+  const { Client, RichEmbed } = require("discord.js");
+  const { config } = require("dotenv");
+  const { Collection } = require("discord.js")
+  const fs = require("fs");
+  const prefix = "a!"
+  
 
 
 client.on('ready', () => {
@@ -81,7 +80,7 @@ client.on('message', message=>{
                                         if (err) console.log(err);
                                     })
 
-                                    let warnEmbed = new Discord.RichEmbed()
+                                    let warnEmbed = new RichEmbed()
                                     .setDescription("Warns")
                                     .setAuthor(message.author.username)
                                     .setColor("#fc6400")
@@ -114,7 +113,7 @@ client.on('message', message=>{
                                     break;
                                     case 'help':
                                         let test1 = "-"
-                                        let helpEmbed = new Discord.RichEmbed()
+                                        let helpEmbed = new RichEmbed()
                                         .setTitle("Help Command!")
                                         .setColor(0xFF0000)
                                         .setDescription("*My prefix is a!*")
@@ -122,7 +121,7 @@ client.on('message', message=>{
                                         .addField("``This bot is made by KingMilk#1476``", test1)
                                         .setFooter('Hope you have a fun time in this discord server!')
 
-                                        let dmEmbed = new Discord.RichEmbed()
+                                        let dmEmbed = new RichEmbed()
                                         .setTitle("Help Command!")
                                         .setColor("RANDOM")
                                         .setDescription("Check Dm's for more information!")
