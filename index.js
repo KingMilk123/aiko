@@ -5,6 +5,8 @@ const fs = require("fs")
 const ms = require("ms")
 let warns = JSON.parse(fs.readFileSync("./warnings.json", "utf8"))
 
+const token = NjQyNDc2MTI5MjczMzgwOTE1.Xcbszw.i-C31i7UMn0esvFM5eZWUP_Hvmc
+
 
 
 bot.on('ready', () => {
@@ -132,4 +134,4 @@ bot.on('message', message=>{
     }
 })
 
-bot.login("NjQyNDc2MTI5MjczMzgwOTE1.XcYrdw.1HAuhmU1u24BD49eO3lnhgGrNnc");
+bot.login(token);
