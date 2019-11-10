@@ -4,6 +4,7 @@
   const { Collection } = require("discord.js")
   const fs = require("fs");
   const prefix = "a!"
+  const botconfig = require("./botconfig.json")
   
   const client = new Client({
     disableEveryone:true
@@ -134,4 +135,4 @@ client.on('message', message=>{
     }
 })
 
-client.login(process.env.TOKEN);
+client.login(botconfig.token)
